@@ -1,6 +1,5 @@
 // pages/index/index.js
 const movie_api = require("../../api/movie")
-const { func } = require("../../module")
 
 Page({
 

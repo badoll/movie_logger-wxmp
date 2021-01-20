@@ -1,6 +1,3 @@
 <!-- demo.wxml -->
 <view> {{msg}}</view>
-<view> {{motto}}</view>
-<view wx:key="{{array}}"> {{item}} </view>
 <button bindtap="clickme">click me</button>
-<button open-type="getUserInfo"></button>
