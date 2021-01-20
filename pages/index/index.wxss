@@ -1,0 +1,143 @@
+/* pages/index/index.wxss */ 
+
+/* .title .title-icon {
+    width: 20%;
+    height: 100%;
+    border: 1px solid green;
+    display: inline-block;
+}
+
+.title .title-icon image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 60%;
+    border: 1px solid black;
+} */
+
+.main-content {
+    width: 100%;
+    height: 80%;
+    /* border: 1px solid red; */
+}
+
+.tab-selection {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 60rpx;
+    font-size: 130rpx;
+    /* border: 1px solid blue; */
+    /* border-bottom: 1px solid rgb(248, 244, 244); */
+}
+
+.tab-selection .tab-nowplaying {
+    position: relative;
+    font-size: 25rpx;
+    font-weight: 500;
+    margin-right: 30rpx;
+    color: rgb(156, 151, 151);
+}
+
+.tab-selection .tab-upcoming {
+    position: relative;
+    font-size: 25rpx;
+    font-weight: 500;
+    margin-left: 30rpx;
+    color: rgb(156, 151, 151);
+}
+
+.tab-selection .tab-active-text {
+    color: rgb(248, 110, 110);
+    border-bottom: 1rpx solid rgb(248, 110, 110);
+}
+
+.movies-nowplaying {
+    position: relative;
+    width: 100%;
+    /* border: 3px solid black; */
+}
+
+.scroll-movie-list {
+}
+
+.scroll-movie-list .movie-inscroll {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid rgb(248, 244, 244);
+    /* border: 2px solid red; */
+}
+
+.movie-inscroll .movie-inscroll-poster {
+    position: relative;
+    margin-left: 30rpx;
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+
+.movie-inscroll-poster image {
+    position: relative;
+    width: 100rpx;
+    height: 200rpx;
+    border-radius: 20%;
+    overflow: hidden;
+}
+
+.movie-inscroll .movie-inscroll-desc {
+    position: relative;
+    height: 100%;
+    width: 400rpx;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid green; */
+}
+
+.movie-inscroll-desc .movie-inscroll-title {
+    position: relative;
+    top: -20rpx;
+    text-align: left;
+    font-size: 30rpx;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* border: 1px solid red; */
+}
+.movie-inscroll-desc .movie-inscroll-cate {
+    text-align: left;
+    font-size: 23rpx;
+    font-weight: 200;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.movie-inscroll-desc .movie-inscroll-director {
+    text-align: left;
+    font-size: 23rpx;
+    font-weight: 200;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.movie-inscroll-desc .movie-inscroll-performer {
+    text-align: left;
+    font-size: 23rpx;
+    font-weight: 200;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.movie-inscroll .movie-inscroll-rating {
+    position: relative;
+    height: 100%;
+    width: 100rpx;
+    /* border: 1px solid blue; */
+}
+
+.movie-inscroll-rating .movie-inscroll-rating_score {
+}

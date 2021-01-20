@@ -1,0 +1,53 @@
+<!-- pages/index/index.wxml -->
+<view class="main">
+  <!-- image -->
+  <!-- <view class="search-wrapper">
+    <search bind:confirm="toSearchList" disabled="{{movieTop250All.length < 250}}" />
+  </view> -->
+  <view class="main-content">
+    <view class="tab-selection">
+      <text class="tab-nowplaying {{selected_tab==0 ? 'tab-active-text' : ''}}" bind:tap="select_tab" data-index="0">正在热映</text>
+      <text class="tab-upcoming {{selected_tab==1 ? 'tab-active-text' : ''}}" bind:tap="select_tab" data-index="1">即将上映</text>
+    </view>
+    <view class="movies-nowplaying" hidden="{{selected_tab != 0}}">
+      <view class='scroll-movie-list'>
+        <scroll-view class="scroll-view" scroll-y>
+          <view class="movie-inscroll" wx:for="{{nowplaying_movie_list}}">
+            <view class="movie-inscroll-poster">
+              <image mode="aspectFit" src="{{item.poster}}"></image>
+            </view>
+            <view class="movie-inscroll-desc">
+              <text class="movie-inscroll-title">{{item.title}}</text>
+              <text class="movie-inscroll-cate">类型：{{item.cate}}</text>
+              <text class="movie-inscroll-cate">导演：{{item.director}}</text>
+              <text class="movie-inscroll-cate">演员：{{item.performer}}</text>
+            </view>
+            <view class="movie-inscroll-rating">
+              <text class="movie-inscroll-rating_score">{{item.rating_score}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="movies-upcoming" hidden="{{selected_tab != 1}}">
+      <view class='scroll-movie-list'>
+        <scroll-view class="scroll-view" scroll-y>
+          <view class="movie-inscroll" wx:for="{{nowplaying_movie_list}}">
+            <view class="movie-inscroll-poster">
+              <image mode="aspectFit" src="{{item.poster}}"></image>
+            </view>
+            <view class="movie-inscroll-desc">
+              <text class="movie-inscroll-title">{{item.title}}</text>
+              <text class="movie-inscroll-cate">类型：{{item.cate}}</text>
+              <text class="movie-inscroll-cate">导演：{{item.director}}</text>
+              <text class="movie-inscroll-cate">演员：{{item.performer}}</text>
+            </view>
+            <view class="movie-inscroll-rating">
+              <text class="movie-inscroll-rating_score" style="font-size: 25rpx">敬请期待</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>
