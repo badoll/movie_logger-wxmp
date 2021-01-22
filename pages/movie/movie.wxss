@@ -1,1 +1,45 @@
 /* pages/movie/movie.wxss */
+
+.header-content {
+  width: 100%;
+  display: inline-flex;
+  border: 1px solid red;
+}
+
+.header-content .movie-poster {
+  height: 100%;
+  flex-basis: 40%;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-poster image {
+  position: relative;
+  width: 214rpx;
+  height: 300rpx;
+  border-radius: 5%;
+}
+
+.header-content .movie-desc {
+  flex-basis: 60%;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  position: relative;
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 25rpx;
+  word-break:break-all;
+  border: 1px solid green;
+}
+
+.movie-desc .movie-title {
+  position: relative;
+  margin-bottom: 30rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}

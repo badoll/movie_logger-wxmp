@@ -1,2 +1,29 @@
 <!--pages/movie/movie.wxml-->
-<text>pages/movie/movie.wxml</text>
+<view class="main-content">
+  <view class="header-content">
+    <view class="movie-poster">
+      <image src="{{movie.poster}}"></image>
+    </view>
+    <view class="movie-desc">
+      <view class="movie-title">{{movie.title}}</view>
+      <view class="movie-cate">类型：{{movie.cate}}</view>
+      <view class="movie-region">地区：{{movie.region}}</view>
+      <view class="movie-runtime">时长：{{movie.runtime}}</view>
+      <view class="movie-release_data">映期：{{movie.release_data}}</view>
+    </view>
+  </view>
+  <view class="rating-content">
+    <!-- <view class="movie-rating_score">{{movie.rating_score}}</view> -->
+  </view>
+  <view class="movie-detail-content">
+    <!-- <view class="detail_tab" wx:for="{{detail_tab}}" wx:key></view> -->
+    <view class="movie-intro"></view>
+    <view class="movie-detail"></view>
+  </view>
+  <view class="movie-main_cast">
+
+  </view>
+  <view class="movie-photos">
+
+  </view>
+</view>

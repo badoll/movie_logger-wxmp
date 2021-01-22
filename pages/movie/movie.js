@@ -1,18 +1,21 @@
 // pages/movie/movie.js
+const movie_api = require("../../api/movie")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    movie: {},
+    detail_tab: ["简介","详细信息"],
+    selected_tab: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({movie: movie_api.get_movie_by_id(options.movie_id)})
   },
 
   /**

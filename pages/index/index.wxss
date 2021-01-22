@@ -14,12 +14,6 @@
     border: 1px solid black;
 } */
 
-.main-content {
-    width: 100%;
-    height: 80%;
-    /* border: 1px solid red; */
-}
-
 .tab-selection {
     display: inline-flex;
     align-items: center;
@@ -57,9 +51,6 @@
     position: relative;
     width: 100%;
     /* border: 3px solid black; */
-}
-
-.scroll-movie-list {
 }
 
 .scroll-movie-list .movie-inscroll {
@@ -137,7 +128,4 @@
     height: 100%;
     width: 100rpx;
     /* border: 1px solid blue; */
-}
-
-.movie-inscroll-rating .movie-inscroll-rating_score {
 }
