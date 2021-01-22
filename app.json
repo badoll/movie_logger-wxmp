@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/demo/demo",
     "pages/demoindex/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/movie/movie"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,7 +28,7 @@
       {
         "selectedIconPath": "src/img/like_page_fill.png",
         "iconPath": "src/img/like_page.png",
-        "pagePath": "pages/demo/demo",
+        "pagePath": "pages/movie/movie",
         "text": "推荐"
       }
     ]
