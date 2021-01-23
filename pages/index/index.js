@@ -27,7 +27,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({nowplaying_movie_list: movie_api.get_nowplaying_movie()})
+    this.setData({
+      nowplaying_movie_list: movie_api.get_nowplaying_movie()
+    })
   },
 
   /**
@@ -78,10 +80,17 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  select_tab: function(e) {
+  select_tab: function (e) {
     console.log(e)
     let index = e.currentTarget.dataset['index']
-    this.setData({selected_tab: parseInt(index)})
+    this.setData({
+      selected_tab: parseInt(index)
+    })
+  },
+  navigate_to_movie: function (e) {
+    let mid = e.currentTarget.dataset.mid
+    wx.navigateTo({
+      url: '../movie/movie?movie_id=' + mid,
+    })
   }
 })

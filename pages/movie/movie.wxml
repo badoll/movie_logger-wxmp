@@ -16,14 +16,41 @@
     <!-- <view class="movie-rating_score">{{movie.rating_score}}</view> -->
   </view>
   <view class="movie-detail-content">
-    <!-- <view class="detail_tab" wx:for="{{detail_tab}}" wx:key></view> -->
-    <view class="movie-intro"></view>
-    <view class="movie-detail"></view>
+    <view class="movie-detail-tab">
+      <view class="detail-tab-text {{current_tab==index?'selected-tab':''}}" wx:for="{{detail_tab}}"
+        bindtap="switch_detail_tab" data-index="{{index}}">
+        {{item}}
+      </view>
+    </view>
+    <view class="movie-intro" hidden="{{current_tab!=0}}">
+      <text class="movie-intro-text {{intro_ellipsis?'ellipsis':''}}"
+        bind:tap="switch_intro_ellipsis">{{movie.intro}}</text>
+    </view>
+    <view class=" movie-detail" hidden="{{current_tab!=1}}">
+      <view class="movie-director">导演：{{movie.director}}</view>
+      <view class="movie-writer">编剧：{{movie.writer}}</view>
+      <view class="movie-performer">演员：{{movie.performer}}</view>
+      <view class="movie-language">语言：{{movie.language}}</view>
+    </view>
   </view>
-  <view class="movie-main_cast">
 
+  <view class=" movie-main_cast">
+    <view class="main_cast-text">演职人员</view>
+    <scroll-view class="main_cast-view" scroll-x>
+      <view class="cast-item" wx:for="{{movie.main_cast}}">
+        <image src="{{item.poster}}" class="cast-poster" mode="aspectFill"></image>
+        <view class="cast-name">{{item.name}}</view>
+      </view>
+    </scroll-view>
   </view>
+
   <view class="movie-photos">
-
+    <view class="photos-text">剧照</view>
+    <scroll-view class="photos-view" scroll-x>
+      <view class="photos-item" wx:for="{{movie.photos}}">
+        <image src="{{item.url}}" class="photos-poster" bindload="set_photos_size" data-index="{{index}}" mode="aspectFit" style="width:{{item.width}}rpx">
+        </image>
+      </view>
+    </scroll-view>
   </view>
 </view>

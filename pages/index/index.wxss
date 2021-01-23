@@ -60,7 +60,7 @@
     justify-content: space-around;
     width: 100%;
     border-bottom: 1px solid rgb(248, 244, 244);
-    /* border: 2px solid red; */
+    /* border: 1px solid red; */
 }
 
 .movie-inscroll .movie-inscroll-poster {
@@ -126,6 +126,16 @@
 .movie-inscroll .movie-inscroll-rating {
     position: relative;
     height: 100%;
-    width: 100rpx;
+    width: 120rpx;
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+
+.movie-inscroll .movie-inscroll-release_date {
+    position: relative;
+    height: 100%;
+    width: 120rpx;
+    font-size: 20rpx;
+    text-align: center;
     /* border: 1px solid blue; */
 }

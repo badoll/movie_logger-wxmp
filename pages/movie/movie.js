@@ -7,15 +7,18 @@ Page({
    */
   data: {
     movie: {},
-    detail_tab: ["简介","详细信息"],
-    selected_tab: 0
+    detail_tab: ["简介", "详细信息"],
+    current_tab: 0,
+    intro_ellipsis: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({movie: movie_api.get_movie_by_id(options.movie_id)})
+    this.setData({
+      movie: movie_api.get_movie_by_id(options.movie_id)
+    })
   },
 
   /**
@@ -65,5 +68,37 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  /**
+   * 切换detail_tab
+   */
+  switch_detail_tab: function (e) {
+    this.setData({
+      current_tab: e.currentTarget.dataset.index
+    })
+  },
+  /**
+   *
+   */
+  switch_intro_ellipsis: function (e) {
+    this.setData({
+      intro_ellipsis: !this.data.intro_ellipsis
+    })
+  },
+
+  /**
+   * 根据图片原尺寸设置等比例宽度（高度一定）
+   */
+  set_photos_size: function (e) {
+    let m = this.data.movie
+    let width = e.detail.width
+    let height = e.detail.height
+    let index = e.currentTarget.dataset.index
+    let x = width / height * 300 //计算出300rpx高度下的等比例宽度
+    m.photos[index].width = x
+    this.setData({
+      movie: m
+    })
   }
 })
