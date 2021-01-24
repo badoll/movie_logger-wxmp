@@ -1,35 +1,18 @@
-// pages/index/index.js
-const movie_api = require("../../api/movie")
-
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
-
-  /**
-   * movie: {
-   *   poster: string, 
-   *   title: string,
-   *   cate: string, //三个以内
-   *   director: string,
-   *   performer: string,
-   *   rating_num: float
-   * }
-   */
   data: {
-    nowplaying_movie_list: [],
-    upcoming_movie_list: [],
-    selected_tab: 0,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      nowplaying_movie_list: movie_api.get_nowplaying_movie()
-    })
+
   },
 
   /**
@@ -79,18 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  select_tab: function (e) {
-    console.log(e)
-    let index = e.currentTarget.dataset['index']
-    this.setData({
-      selected_tab: parseInt(index)
-    })
-  },
-  navigate_to_movie: function (e) {
-    let mid = e.currentTarget.dataset.mid
-    wx.navigateTo({
-      url: "/pages/movie/movie?movie_id=" + mid,
-    })
   }
 })

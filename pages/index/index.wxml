@@ -1,9 +1,6 @@
 <!-- pages/index/index.wxml -->
 <view class="main">
-  <!-- image -->
-  <!-- <view class="search-wrapper">
-    <search bind:confirm="toSearchList" disabled="{{movieTop250All.length < 250}}" />
-  </view> -->
+  <search_bar></search_bar>
   <view class="main-content">
     <view class="tab-selection">
       <text class="tab-nowplaying {{selected_tab==0 ? 'tab-active-text' : ''}}" bind:tap="select_tab"
@@ -35,7 +32,8 @@
     <view class="movies-upcoming" hidden="{{selected_tab != 1}}">
       <view class='scroll-movie-list'>
         <scroll-view class="scroll-view" scroll-y>
-          <view class="movie-inscroll" wx:for="{{nowplaying_movie_list}}">
+          <view class="movie-inscroll" wx:for="{{nowplaying_movie_list}}" bindtap="navigate_to_movie"
+            data-mid="{{item.id}}">
             <view class="movie-inscroll-poster">
               <image mode="aspectFit" src="{{item.poster}}"></image>
             </view>

@@ -23,7 +23,7 @@
       </view>
     </view>
     <view class="movie-intro" hidden="{{current_tab!=0}}">
-      <text class="movie-intro-text {{intro_ellipsis?'ellipsis':''}}"
+      <text selectable="true" class="movie-intro-text {{intro_ellipsis?'ellipsis':''}}"
         bind:tap="switch_intro_ellipsis">{{movie.intro}}</text>
     </view>
     <view class=" movie-detail" hidden="{{current_tab!=1}}">

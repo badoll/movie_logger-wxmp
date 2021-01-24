@@ -1,0 +1,27 @@
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  z-index: 999;
+}
+
+.nav-bar .search_bar {
+  position: absolute;
+  /* 整体占空间90% */
+  left: 5%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.search_bar .icon {
+  border-radius: 50%;
+}
+
+.search_bar .search {
+  border-radius: 50px;
+  background: rgb(247, 247, 247);
+  font-size: 30rpx;
+  text-align: center;
+  width: 380rpx;
+}

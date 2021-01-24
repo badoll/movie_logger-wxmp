@@ -4,8 +4,8 @@
     "pages/movie/movie",
     "pages/demo/demo",
     "pages/demoindex/index",
-    "pages/logs/logs"
-
+    "pages/logs/logs",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",

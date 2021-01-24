@@ -1,0 +1,12 @@
+<!-- 自定义顶部栏 -->
+<view class="nav-bar" style="height:{{nav_bar_height}}px;">
+    <view class="search_bar"
+        style="height:{{menu_height}}px; min-height:{{menu_height}}px; line-height:{menu_height}}px; bottom:{{menu_bottom}}px; width:{{search_bar_width}}px">
+        <image src="../../src/img/icon.jpg" class="icon" style="height:{{menu_height}}px; width:{{menu_height}}px;">
+        </image>
+        <input disabled="true" class="search" placeholder="搜索" style="height:{{menu_height}}px;" bindtap="navigate_to_search"></input>
+    </view>
+</view>
+
+<!-- 用于占位 -->
+<view class="holder-view" style="margin-top:{{nav_bar_height}}px;"></view>
