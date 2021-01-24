@@ -1,2 +1,7 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="main-content">
+  <view class="search-bar">
+    <input focus="true" class="search-input" placeholder="搜索感兴趣的电影" bindinput="onInput" bindconfirm="onSearch"
+      confirm-type="search"></input>
+  </view>
+</view>

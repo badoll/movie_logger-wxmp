@@ -62,5 +62,17 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  onInput: function(event) {
+    this.search_movie_by_title(event.detail.value)
+  },
+
+  onSearch: function(event) {
+    this.search_movie_by_title(event.detail.value)
+  },
+
+  search_movie_by_title: function(title) {
+    // todo
+  },
 })

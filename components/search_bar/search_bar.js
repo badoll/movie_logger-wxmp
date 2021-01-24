@@ -16,14 +16,12 @@ Component({
         menu_height: app.globalData.screen_size.menu_height,
         search_bar_width: app.globalData.screen_size.menu_left - 2 * app.globalData.screen_size.left_border,
     },
-    attached: function() {
-    },
-
+    attached: function () {},
     methods: {
-    navigate_to_search: function(e) {
-        wx.navigateTo({
-          url: '/pages/search/search',
-        })
-    }    
+        navigate_to_search: function (e) {
+            wx.navigateTo({
+                url: '/pages/search/search',
+            })
+        }
     }
 })

@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/search/search",
     "pages/index/index",
     "pages/movie/movie",
     "pages/demo/demo",
     "pages/demoindex/index",
-    "pages/logs/logs",
-    "pages/search/search"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -24,7 +24,7 @@
       {
         "selectedIconPath": "src/img/main_page_fill.png",
         "iconPath": "src/img/main_page.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/search/search",
         "text": "首页"
       },
       {
