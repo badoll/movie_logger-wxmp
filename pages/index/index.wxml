@@ -1,6 +1,6 @@
 <!-- pages/index/index.wxml -->
+<search_bar></search_bar>
 <view class="main">
-  <search_bar></search_bar>
   <view class="main-content">
     <view class="tab-selection">
       <text class="tab-nowplaying {{selected_tab==0 ? 'tab-active-text' : ''}}" bind:tap="select_tab"

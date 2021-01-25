@@ -1,10 +1,12 @@
 /* pages/index/index.wxss */
 
+.main {
+    display: flex;
+    justify-content: center;
+}
+
 .main-content {
     width: 90%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .tab-selection {
@@ -42,8 +44,13 @@
 
 .movies-nowplaying {
     width: 100%;
+    /* 竖向滚动view需要设置高度 */
+    height: 100%;
+    /* border: 1px solid red; */
 }
 
 .movies-upcoming {
     width: 100%;
+    /* 竖向滚动view需要设置高度 */
+    height: 100%;
 }

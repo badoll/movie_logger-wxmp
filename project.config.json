@@ -33,7 +33,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.14.1",
+  "libVersion": "2.14.4",
   "appid": "wxc7c0e4d92fb86f81",
   "projectname": "movie_logger",
   "debugOptions": {

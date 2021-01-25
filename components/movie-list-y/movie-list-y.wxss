@@ -1,9 +1,7 @@
-.scroll-movie-list {
+.scroll-view {
   width: 100%;
-}
-
-.scroll-movie-list .scroll-view {
-  width: 100%;
+  /* 竖向滚动需要设置高度 */
+  height: 100%;
 }
 
 .scroll-view .movie-inscroll {

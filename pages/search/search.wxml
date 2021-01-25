@@ -1,11 +1,13 @@
 <!--pages/search/search.wxml-->
-<view class="main-content">
-  <view class="search-bar">
-    <input focus="true" class="search-input" placeholder="搜索感兴趣的电影" bindinput="onInput" bindconfirm="onSearch"
-      confirm-type="search"></input>
+<view class="main">
+  <view class="main-content">
+    <view class="search-bar">
+      <input focus="true" class="search-input" placeholder="搜索感兴趣的电影" bindinput="onInput" bindconfirm="onSearch"
+        confirm-type="search"></input>
+    </view>
+    <!-- 用于占位 -->
+    <view class="holder-view"></view>
+
+    <movie-list-y></movie-list-y>
   </view>
-  <!-- 用于占位 -->
-  <view class="holder-view"></view>
-  
-  <movie-list-y></movie-list-y>
 </view>
