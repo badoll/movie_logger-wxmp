@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "movie-list-y": "/components/movie-list-y/movie-list-y"
+  },
   "navigationBarTitleText": "搜索"
 }

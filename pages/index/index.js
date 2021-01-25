@@ -81,7 +81,6 @@ Page({
 
   },
   select_tab: function (e) {
-    console.log(e)
     let index = e.currentTarget.dataset['index']
     this.setData({
       selected_tab: parseInt(index)

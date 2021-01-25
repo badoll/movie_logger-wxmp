@@ -7,7 +7,8 @@ function get_nowplaying_movie() {
             director: "director",
             performer: "performer1, performer2",
             rating_score: 7.3,
-            release_date: "2021-01-23"
+            release_date: "2021-01-23",
+            released: true
         },
         {
             id: "2",
@@ -17,7 +18,8 @@ function get_nowplaying_movie() {
             director: "director测试电影名字长度测试电影名字长度",
             performer: "performer1, performer2测试电影名字长度测试电影名字长度测试电影名字长度测试电影名字长度测试电影名字长度",
             rating_score: 7.3,
-            release_date: "2021-01-23"
+            release_date: "2021-01-23",
+            released: true
         },
         {
             id: "3",
@@ -27,7 +29,8 @@ function get_nowplaying_movie() {
             director: "director",
             performer: "performer1, performer2",
             rating_score: 7.3,
-            release_date: "2021-01-23"
+            release_date: "2021-01-23",
+            released: true
         },
         {
             id: "4",
@@ -37,7 +40,8 @@ function get_nowplaying_movie() {
             director: "director",
             performer: "performer1, performer2",
             rating_score: 7.3,
-            release_date: "2021-01-23"
+            release_date: "2021-01-23",
+            released: true
         },
         {
             id: "5",
@@ -47,7 +51,8 @@ function get_nowplaying_movie() {
             director: "director",
             performer: "performer1, performer2",
             rating_score: 7.3,
-            release_date: "2021-01-23"
+            release_date: "2021-01-23",
+            released: true
         },
         {
             id: "6",
@@ -57,7 +62,8 @@ function get_nowplaying_movie() {
             director: "director",
             performer: "performer1, performer2",
             rating_score: 7.3,
-            release_date: "2021-01-23"
+            release_date: "2021-01-23",
+            released: true
         },
         {
             id: "123",
@@ -67,7 +73,8 @@ function get_nowplaying_movie() {
             director: "director",
             performer: "performer1, performer2",
             rating_score: 7.3,
-            release_date: "2021-01-23"
+            release_date: "2021-01-23",
+            released: true
         },
     ]
 }

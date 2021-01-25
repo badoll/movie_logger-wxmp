@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/search/search",
     "pages/index/index",
+    "pages/search/search",
     "pages/movie/movie",
     "pages/demo/demo",
     "pages/demoindex/index",
@@ -24,7 +24,7 @@
       {
         "selectedIconPath": "src/img/main_page_fill.png",
         "iconPath": "src/img/main_page.png",
-        "pagePath": "pages/search/search",
+        "pagePath": "pages/index/index",
         "text": "首页"
       },
       {

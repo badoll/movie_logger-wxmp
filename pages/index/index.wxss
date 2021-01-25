@@ -1,18 +1,11 @@
-/* pages/index/index.wxss */ 
+/* pages/index/index.wxss */
 
-/* .title .title-icon {
-    width: 20%;
-    height: 100%;
-    border: 1px solid green;
-    display: inline-block;
+.main-content {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
-
-.title .title-icon image {
-    width: 60rpx;
-    height: 60rpx;
-    border-radius: 60%;
-    border: 1px solid black;
-} */
 
 .tab-selection {
     display: inline-flex;
@@ -48,94 +41,9 @@
 }
 
 .movies-nowplaying {
-    position: relative;
     width: 100%;
-    /* border: 3px solid black; */
 }
 
-.scroll-movie-list .movie-inscroll {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-around;
+.movies-upcoming {
     width: 100%;
-    border-bottom: 1px solid rgb(248, 244, 244);
-    /* border: 1px solid red; */
-}
-
-.movie-inscroll .movie-inscroll-poster {
-    position: relative;
-    margin-left: 30rpx;
-    height: 100%;
-    /* border: 1px solid blue; */
-}
-
-.movie-inscroll-poster image {
-    position: relative;
-    width: 100rpx;
-    height: 200rpx;
-    border-radius: 20%;
-    overflow: hidden;
-}
-
-.movie-inscroll .movie-inscroll-desc {
-    position: relative;
-    height: 100%;
-    width: 400rpx;
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid green; */
-}
-
-.movie-inscroll-desc .movie-inscroll-title {
-    position: relative;
-    top: -20rpx;
-    text-align: left;
-    font-size: 30rpx;
-    font-weight: bold;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    /* border: 1px solid red; */
-}
-.movie-inscroll-desc .movie-inscroll-cate {
-    text-align: left;
-    font-size: 23rpx;
-    font-weight: 200;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.movie-inscroll-desc .movie-inscroll-director {
-    text-align: left;
-    font-size: 23rpx;
-    font-weight: 200;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-.movie-inscroll-desc .movie-inscroll-performer {
-    text-align: left;
-    font-size: 23rpx;
-    font-weight: 200;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.movie-inscroll .movie-inscroll-rating {
-    position: relative;
-    height: 100%;
-    width: 120rpx;
-    text-align: center;
-    /* border: 1px solid blue; */
-}
-
-.movie-inscroll .movie-inscroll-release_date {
-    position: relative;
-    height: 100%;
-    width: 120rpx;
-    font-size: 20rpx;
-    text-align: center;
-    /* border: 1px solid blue; */
 }

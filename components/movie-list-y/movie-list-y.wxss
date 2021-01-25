@@ -1,0 +1,79 @@
+.scroll-movie-list {
+  width: 100%;
+}
+
+.scroll-movie-list .scroll-view {
+  width: 100%;
+}
+
+.scroll-view .movie-inscroll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 1px solid rgb(248, 244, 244);
+  /* border: 1px solid red; */
+}
+
+.movie-inscroll .movie-inscroll-poster {
+  width: 100rpx;
+  height: 150rpx;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20rpx;
+  /* border: 1px solid blue; */
+}
+
+.movie-inscroll-poster image {
+  position: relative;
+  width: 100rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.movie-inscroll .movie-inscroll-desc {
+  position: relative;
+  height: 100%;
+  width: 400rpx;
+  padding-bottom: 8rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid green; */
+}
+
+.movie-inscroll-desc .desc-text {
+  margin-left: 30rpx;
+  text-align: left;
+  font-size: 23rpx;
+  font-weight: 200;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.movie-inscroll-desc .desc-title {
+  position: relative;
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  /* border: 1px solid red; */
+}
+
+.movie-inscroll .movie-inscroll-rating {
+  width: 120rpx;
+  text-align: center;
+  /* border: 1px solid blue; */
+}
+
+.movie-inscroll .movie-inscroll-release_date {
+  width: 120rpx;
+  font-size: 20rpx;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  /* border: 1px solid blue; */
+}
