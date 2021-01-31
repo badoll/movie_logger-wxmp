@@ -4,7 +4,7 @@
         style="height:{{menu_height}}px; min-height:{{menu_height}}px; line-height:{menu_height}}px; bottom:{{menu_bottom}}px; width:{{search_bar_width}}px">
         <image src="../../src/img/icon.jpg" class="icon" style="height:{{menu_height}}px; width:{{menu_height}}px;">
         </image>
-        <input disabled="true" class="search" placeholder="搜索" style="height:{{menu_height}}px;" bindtap="navigate_to_search"></input>
+        <input disabled="true" class="search" placeholder="搜索" style="height:{{menu_height}}px;" bindtap="onNavigate"></input>
     </view>
 </view>
 

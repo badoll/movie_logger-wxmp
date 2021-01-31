@@ -1,98 +1,38 @@
 function get_nowplaying_movie() {
-    return [{
-            id: "1",
-            title: "测试电影名字长度测试电影名字长度测试电影名字长度测试电影名字长度测试电影名字长度",
-            poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
-            cate: "cate1,cate2",
-            director: "director",
-            performer: "performer1, performer2",
-            rating_score: 7.3,
-            release_date: "2021-01-23",
-            released: true
-        },
-        {
-            id: "2",
-            title: "testmovie2",
-            poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
-            cate: "cate1,cate2测试电影名字长度测试电影名字长度测试电影名字长度",
-            director: "director测试电影名字长度测试电影名字长度",
-            performer: "performer1, performer2测试电影名字长度测试电影名字长度测试电影名字长度测试电影名字长度测试电影名字长度",
-            rating_score: 7.3,
-            release_date: "2021-01-23",
-            released: true
-        },
-        {
-            id: "3",
-            title: "testmovie3",
-            poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
-            cate: "cate1,cate2",
-            director: "director",
-            performer: "performer1, performer2",
-            rating_score: 7.3,
-            release_date: "2021-01-23",
-            released: true
-        },
-        {
-            id: "4",
-            title: "testmovie4",
-            poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
-            cate: "cate1,cate2",
-            director: "director",
-            performer: "performer1, performer2",
-            rating_score: 7.3,
-            release_date: "2021-01-23",
-            released: true
-        },
-        {
-            id: "5",
-            title: "testmovie5",
-            poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
-            cate: "cate1,cate2",
-            director: "director",
-            performer: "performer1, performer2",
-            rating_score: 7.3,
-            release_date: "2021-01-23",
-            released: true
-        },
-        {
-            id: "6",
-            title: "testmovie6",
-            poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
-            cate: "cate1,cate2",
-            director: "director",
-            performer: "performer1, performer2",
-            rating_score: 7.3,
-            release_date: "2021-01-23",
-            released: true
-        },
-        {
-            id: "123",
-            title: "testmovie7",
-            poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
-            cate: "cate1,cate2",
-            director: "director",
-            performer: "performer1, performer2",
-            rating_score: 7.3,
-            release_date: "2021-01-23",
-            released: true
-        },
-    ]
+    let list = new Array(20)
+    list.fill({
+        id: "1",
+        title: "test-movie",
+        poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
+        cate: "cate1,cate2",
+        director: "director",
+        performer: "performer1, performer2",
+        rating_score: 7.3,
+        release_date: "2021-01-23",
+        released: true
+    })
+    return list
 }
 
 function get_upcoming_movie() {
 
 }
 
+
+/**
+ * 通过id拉电影详情
+ * @param {*} id 
+ */
 function get_movie_by_id(id) {
     return {
-        title: "testmovie",
+        title: "test-movie",
         // title: "testmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovietestmovie",
         poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
         cate: "cate1,cate2",
         // cate: "cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2cate1,cate2",
         director: "director",
         performer: "performer1, performer2, performer3",
-        performer: "performer1, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2",
+        // performer: "performer1, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2, performer2",
         rating_score: 7.3,
         rating_stars: [{
             lv: 5,
@@ -121,6 +61,9 @@ function get_movie_by_id(id) {
             poster: "https://img2.doubanio.com/view/photo/l/public/p2265232293.webp",
             name: "倪妮"
         }, {
+            poster: "https://img2.doubanio.com/view/photo/l/public/p2265232293.webp",
+            name: "nini"
+        }, {
             poster: "https://img3.doubanio.com/view/photo/l/public/p2321839760.webp",
             name: "伊丽莎白·奥尔森"
         }, {
@@ -129,9 +72,6 @@ function get_movie_by_id(id) {
         }, {
             poster: "https://img3.doubanio.com/view/photo/l/public/p2321839760.webp",
             name: "伊丽莎白·奥尔森"
-        }, {
-            poster: "https://img2.doubanio.com/view/photo/l/public/p2265232293.webp",
-            name: "nini"
         }, {
             poster: "https://img2.doubanio.com/view/photo/l/public/p2265232293.webp",
             name: "nini"
@@ -157,6 +97,27 @@ function get_movie_by_id(id) {
     }
 }
 
+/**
+ * 通过标题模糊搜索电影
+ * @param {*} title 
+ */
+function get_movie_by_title(title) {
+    let list = new Array(10)
+    list.fill({
+        id: "1",
+        title: "test-movie",
+        poster: "https://img3.doubanio.com/view/photo/m/public/p2629954180.webp",
+        cate: "cate1,cate2",
+        director: "director",
+        performer: "performer1, performer2",
+        rating_score: 7.3,
+        release_date: "2021-01-23",
+        released: true
+    })
+    return list
+}
+
 exports.get_nowplaying_movie = get_nowplaying_movie
 exports.get_upcoming_movie = get_upcoming_movie
 exports.get_movie_by_id = get_movie_by_id
+exports.get_movie_by_title = get_movie_by_title

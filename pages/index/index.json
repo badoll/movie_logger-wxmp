@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "search_bar": "/components/search_bar/search_bar",
-    "movie-list-y": "/components/movie-list-y/movie-list-y"
+    "movie-itemy": "/components/movie-itemy/movie-itemy"
   },
-  "navigationStyle": "custom"
+  "navigationStyle": "custom",
+  "onReachBottomDistance": 50
 }

@@ -1,11 +1,15 @@
 // pages/search/search.js
+
+const movie_api = require("../../api/movie")
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    movieList: [],
+    searchText: "",
   },
 
   /**
@@ -54,7 +58,11 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    let list = this.data.movieList
+    let list2 = movie_api.get_movie_by_title(this.data.searchText)
+    this.setData({
+      movieList: list.concat(list2)
+    })
   },
 
   /**
@@ -64,15 +72,21 @@ Page({
 
   },
 
-  onInput: function(event) {
-    this.search_movie_by_title(event.detail.value)
+  onInput: function (event) {
+    //TODO 暂时不做实时查询
+    // this.onSearchMovieByTitle(event.detail.value)
   },
 
-  onSearch: function(event) {
-    this.search_movie_by_title(event.detail.value)
+  onSearch: function (event) {
+    this.setData({
+      searchText: event.detail.value
+    })
+    this.onSearchMovieByTitle(event.detail.value)
   },
 
-  search_movie_by_title: function(title) {
-    // todo
+  onSearchMovieByTitle: function (title) {
+    this.setData({
+      movieList: movie_api.get_movie_by_title(title)
+    })
   },
 })

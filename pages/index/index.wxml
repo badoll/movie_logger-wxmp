@@ -3,16 +3,26 @@
 <view class="main">
   <view class="main-content">
     <view class="tab-selection">
-      <text class="tab-nowplaying {{selected_tab==0 ? 'tab-active-text' : ''}}" bind:tap="select_tab"
+      <text class="tab-nowplaying {{selected_tab==0 ? 'tab-active-text' : ''}}" bind:tap="onSelectTab"
         data-index="0">正在热映</text>
-      <text class="tab-upcoming {{selected_tab==1 ? 'tab-active-text' : ''}}" bind:tap="select_tab"
+      <text class="tab-upcoming {{selected_tab==1 ? 'tab-active-text' : ''}}" bind:tap="onSelectTab"
         data-index="1">即将上映</text>
     </view>
-    <view class="movies-nowplaying" hidden="{{selected_tab != 0}}">
-      <movie-list-y movie_list="{{nowplaying_movie_list}}"></movie-list-y>
+    
+    <!-- 使用scrollview组件调整滚动高度比较麻烦，暂时不用scrollview -->
+    <!-- <view class="movies-nowplaying" hidden="{{selected_tab != 0}}" style="height:{{scroll_height}}rpx">
+      <movie-list-y movie_list="{{nowplaying_movie_list}}" ></movie-list-y>
     </view>
     <view class="movies-upcoming" hidden="{{selected_tab != 1}}">
       <movie-list-y movie_list="{{nowplaying_movie_list}}"></movie-list-y>
+    </view> -->
+
+    <view class="movies-nowplaying" hidden="{{selected_tab != 0}}" wx:for="{{nowplaying_movie_list}}">
+      <movie-itemy movie="{{item}}"></movie-itemy>
     </view>
+    <view class="movies-upcoming" hidden="{{selected_tab != 1}}" wx:for="{{nowplaying_movie_list}}">
+      <movie-itemy movie="{{item}}"></movie-itemy>
+    </view>
+
   </view>
 </view>

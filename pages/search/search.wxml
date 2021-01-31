@@ -7,7 +7,8 @@
     </view>
     <!-- 用于占位 -->
     <view class="holder-view"></view>
-
-    <movie-list-y></movie-list-y>
+    <view class="movie-list" wx:for="{{movieList}}">
+      <movie-itemy movie="{{item}}"></movie-itemy>
+    </view>
   </view>
 </view>

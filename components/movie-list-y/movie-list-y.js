@@ -83,6 +83,12 @@ Component({
       wx.navigateTo({
         url: "/pages/movie/movie?movie_id=" + mid,
       })
+    },
+    OnScrollToBottom: function (event) {
+      console.log('onBottom', event, new Date().getTime())
+    },
+    onScroll: function (event) {
+      console.log('onScroll', event, new Date().getTime())
     }
   }
 })

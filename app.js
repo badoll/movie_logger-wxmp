@@ -43,7 +43,7 @@ App({
       }
     })
   },
-  init_navbar_size: function() {
+  init_navbar_size: function () {
     const that = this;
     // 获取系统信息
     const systemInfo = wx.getSystemInfoSync();
@@ -56,6 +56,8 @@ App({
     that.globalData.screen_size.menu_bottom = menuButtonInfo.top - systemInfo.statusBarHeight;
     that.globalData.screen_size.menu_height = menuButtonInfo.height
     that.globalData.screen_size.left_border = systemInfo.screenWidth * 0.05;
+    console.log(systemInfo)
+    console.log(that.globalData)
   },
   globalData: {
     screen_size: {

@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "movie-list-y": "/components/movie-list-y/movie-list-y"
+    "movie-itemy": "/components/movie-itemy/movie-itemy"
   },
   "navigationBarTitleText": "搜索"
 }

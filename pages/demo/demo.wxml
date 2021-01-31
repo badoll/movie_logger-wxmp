@@ -1,3 +1,0 @@
-<!-- demo.wxml -->
-<view> {{msg}}</view>
-<button bindtap="clickme">click me</button>

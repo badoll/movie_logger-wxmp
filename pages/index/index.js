@@ -15,6 +15,7 @@ Page({
    *   director: string,
    *   performer: string,
    *   rating_num: float
+   *   released_date: string
    * }
    */
   data: {
@@ -80,16 +81,13 @@ Page({
   onShareAppMessage: function () {
 
   },
-  select_tab: function (e) {
+  onSelectTab: function (e) {
     let index = e.currentTarget.dataset['index']
     this.setData({
       selected_tab: parseInt(index)
     })
   },
-  navigate_to_movie: function (e) {
-    let mid = e.currentTarget.dataset.mid
-    wx.navigateTo({
-      url: "/pages/movie/movie?movie_id=" + mid,
-    })
+  onReachBottom: function () {
+    console.log("onReachBottom")
   }
 })

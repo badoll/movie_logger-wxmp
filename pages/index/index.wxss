@@ -1,5 +1,6 @@
 /* pages/index/index.wxss */
 
+/* 设置整体居中，占屏90% */
 .main {
     display: flex;
     justify-content: center;
@@ -45,12 +46,12 @@
 .movies-nowplaying {
     width: 100%;
     /* 竖向滚动view需要设置高度 */
-    height: 100%;
+    /* height: 100%; */
     /* border: 1px solid red; */
 }
 
 .movies-upcoming {
     width: 100%;
     /* 竖向滚动view需要设置高度 */
-    height: 100%;
+    /* height: 100%; */
 }

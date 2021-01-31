@@ -1,12 +1,4 @@
-.scroll-view {
-  width: 100%;
-  /* 竖向滚动需要设置高度 */
-  height: 100%;
-  /* overflow-y: auto; */
-  /* height: 100vh; */
-}
-
-.scroll-view .movie-inscroll {
+.movie-inscroll {
   display: inline-flex;
   align-items: center;
   justify-content: space-around;
@@ -26,7 +18,7 @@
   /* border: 1px solid blue; */
 }
 
-.movie-inscroll-poster image {
+.movie-inscroll-poster .poster-image {
   position: relative;
   width: 100rpx;
   height: 150rpx;

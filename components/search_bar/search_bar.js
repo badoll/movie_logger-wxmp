@@ -18,7 +18,7 @@ Component({
     },
     attached: function () {},
     methods: {
-        navigate_to_search: function (e) {
+        onNavigate: function (e) {
             wx.navigateTo({
                 url: '/pages/search/search',
             })
