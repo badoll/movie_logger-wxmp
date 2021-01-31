@@ -29,3 +29,7 @@
 .holder-view {
   margin-top: 60rpx;
 }
+
+.movie-list {
+  width: 100%;
+}

@@ -8,7 +8,9 @@
     <text class="desc-text">导演：{{movie.director}}</text>
     <text class="desc-text">演员：{{movie.performer}}</text>
   </view>
-  <view class="movie-inscroll-rating" hidden="{{!movie.released}}">{{movie.rating_score}}</view>
+  <view class="movie-inscroll-rating" hidden="{{!movie.released}}">
+    <rating-stars max="10" rating="{{movie.rating_score}}"></rating-stars>
+  </view>
   <view class="movie-inscroll-release_date" hidden="{{movie.released}}">{{movie.release_date}}</view>
 </view>
 <!-- <view style="margin-bottom:100rpx"></view> -->

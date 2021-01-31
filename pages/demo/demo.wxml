@@ -1,0 +1,3 @@
+<view>
+  <rating-stars max="10" rating="6.5"></rating-stars>
+</view>

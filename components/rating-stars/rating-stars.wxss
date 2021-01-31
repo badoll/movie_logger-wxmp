@@ -1,0 +1,26 @@
+.main {
+  display: inline-block;
+  position: relative;
+}
+
+.rating-stars {
+  display: inline-block;
+}
+
+.rating-stars:not(:last-child) {
+  /* margin-right: .1em; */
+}
+
+.star-on {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+
+.star-off {
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid blue; */
+}
