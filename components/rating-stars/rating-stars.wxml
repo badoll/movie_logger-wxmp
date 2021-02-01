@@ -4,10 +4,10 @@
     <view class="star-on"
       style="width:{{rating >= (max/5)*item ? unitWidth : rating < (max/5)*(item-1) ? 0 : ((rating*10)%(max/5*10))/(max/5*10) * unitWidth}}rpx">
       <!-- 计算比例，用实星覆盖空星，实星position: absolute -->
-      <image src="../../src/img/star-on.png" mode="widthFix" style="width:{{unitWidth}}rpx"></image>
+      <image src="../../src/img/star-on.png" mode="widthFix" style="width:{{unitWidth}}rpx; height:{{unitWidth}}rpx"></image>
     </view>
     <view class="star-off" style="width:{{unitWidth}}rpx">
-      <image src="../../src/img/star-off.png" mode="widthFix" style="width:{{unitWidth}}rpx"></image>
+      <image src="../../src/img/star-off.png" mode="widthFix" style="width:{{unitWidth}}rpx; height:{{unitWidth}}rpx"></image>
     </view>
   </view>
 </view>
