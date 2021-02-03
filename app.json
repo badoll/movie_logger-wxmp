@@ -5,7 +5,8 @@
     "pages/movie/movie",
     "pages/demo/demo",
     "pages/demoindex/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/recommend/recommend"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,7 +31,7 @@
       {
         "selectedIconPath": "src/img/like_page_fill.png",
         "iconPath": "src/img/like_page.png",
-        "pagePath": "pages/demo/demo",
+        "pagePath": "pages/recommend/recommend",
         "text": "推荐"
       }
     ]

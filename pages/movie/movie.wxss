@@ -115,8 +115,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-right: 20rpx;
   /* border: 1px solid blue; */
+}
+
+.main_cast-view .cast-item:not(:last-child) {
+  margin-right: 20rpx;
 }
 
 .cast-item .cast-name {
@@ -149,6 +152,9 @@
 
 .photos-view .photos-item {
   display: inline-block;
+}
+
+.photos-view .photos-item:not(:last-child) {
   margin-right: 10rpx;
 }
 

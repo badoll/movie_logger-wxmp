@@ -1,0 +1,20 @@
+<!--pages/recommend/recommend.wxml-->
+<view class="main">
+  <view class="main-content">
+    <view class="recommend">
+
+    </view>
+
+    <view class="oneweek-hot">
+      <movie-list-x></movie-list-x>
+    </view>
+
+    <view class="oneweek-praise">
+      <movie-list-x></movie-list-x>
+    </view>
+
+    <view class="top250">
+      <movie-list-x></movie-list-x>
+    </view>
+  </view>
+</view>

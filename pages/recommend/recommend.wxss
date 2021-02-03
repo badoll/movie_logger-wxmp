@@ -1,0 +1,10 @@
+/* pages/recommend/recommend.wxss */
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  width: 90%;
+}
