@@ -117,7 +117,87 @@ function get_movie_by_title(title) {
     return list
 }
 
+/**
+ * 
+ * @param {*} params 
+ */
+function get_recommend_movie_list_by_user(user_id) {
+    let list = new Array(5)
+    list.fill({
+        id: "1",
+        title: "拆弹专家2",
+        poster: "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2621379901.webp",
+        performer: "刘德华/刘青云/倪妮",
+        photos: [{
+            url: "https://img3.doubanio.com/view/photo/l/public/p2629269420.webp",
+        }, {
+            url: "https://img9.doubanio.com/view/photo/l/public/p2629193904.webp",
+        }, {
+            url: "https://img2.doubanio.com/view/photo/l/public/p2494832612.webp",
+        }, {
+            url: "https://img2.doubanio.com/view/photo/l/public/p2245109502.webp",
+        }, {
+            url: "https://img9.doubanio.com/view/photo/l/public/p2177143966.webp",
+        }, {
+            url: "https://img9.doubanio.com/view/photo/l/public/p2162060094.webp",
+        }, {
+            url: "https://img9.doubanio.com/view/photo/l/public/p2522076486.webp",
+        }],
+        rating_score: 7.3,
+    })
+    return list
+}
+
+/**
+ * 
+ * @param {*} params 
+ */
+function get_recommend_movie_list_by_movie(movie_id) {
+    let list = new Array(5)
+    list.fill({
+        id: "1",
+        title: "拆弹专家2",
+        poster: "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2621379901.webp",
+        rating_score: 7.3,
+    })
+    return list
+}
+
+/**
+ * 
+ * @param {*} params 
+ */
+function get_oneweek_hot_movie_list() {
+    let list = new Array(5)
+    list.fill({
+        id: "1",
+        title: "拆弹专家2",
+        poster: "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2621379901.webp",
+        rating_score: 7.3,
+    })
+    return list
+}
+
+/**
+ * 
+ * @param {*} params 
+ */
+function get_oneweek_praise_movie_list() {
+    let list = new Array(5)
+    list.fill({
+        id: "1",
+        title: "拆弹专家2",
+        poster: "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2621379901.webp",
+        rating_score: 7.3,
+    })
+    return list
+}
+
 exports.get_nowplaying_movie = get_nowplaying_movie
 exports.get_upcoming_movie = get_upcoming_movie
 exports.get_movie_by_id = get_movie_by_id
 exports.get_movie_by_title = get_movie_by_title
+exports.get_recommend_movie_list_by_user = get_recommend_movie_list_by_user
+exports.get_recommend_movie_list_by_movie = get_recommend_movie_list_by_movie
+exports.get_oneweek_hot_movie_list = get_oneweek_hot_movie_list
+exports.get_oneweek_praise_movie_list = get_oneweek_praise_movie_list

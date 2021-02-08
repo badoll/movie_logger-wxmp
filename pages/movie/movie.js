@@ -9,7 +9,8 @@ Page({
     movie: {},
     detail_tab: ["简介", "详细信息"],
     current_tab: 0,
-    intro_ellipsis: true
+    intro_ellipsis: true,
+    recommend_movie_list: []
   },
 
   /**
@@ -17,7 +18,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      movie: movie_api.get_movie_by_id(options.movie_id)
+      movie: movie_api.get_movie_by_id(options.movie_id),
+      recommend_movie_list: movie_api.get_recommend_movie_list_by_movie(options.movie_id),
     })
   },
 

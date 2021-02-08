@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "movie-list-x": "/components/movie-list-x/movie-list-x"
-  }
+    "search_bar": "/components/search_bar/search_bar",
+    "movie-list-x": "/components/movie-list-x/movie-list-x",
+    "movie-recommend": "/components/movie-recommend/movie-recommend"
+  },
+  "navigationStyle": "custom"
 }

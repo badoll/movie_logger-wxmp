@@ -1,0 +1,17 @@
+<view class="movie" bindtap="onNavigate" data-mid="{{movie.id}}">
+  <!-- 推荐页用电影剧照展示更容易引起兴趣 -->
+  <scroll-view class="movie-photos-view" scroll-x="true">
+    <view class="photos-item" wx:for="{{movie.display_photos}}" wx:key="unique">
+      <image src="{{item.url}}" class="photos-poster" bindload="onSetPhotosSize" data-index="{{index}}" mode="aspectFit"
+        style="width:{{item.width}}rpx">
+      </image>
+    </view>
+  </scroll-view>
+  <view class="movie-desc">
+    <view class="movie-title movie-desc-text">{{movie.title}}</view>
+    <view class="movie-performer movie-desc-text">{{movie.performer}}</view>
+    <view class="movie-rating">
+      <rating-stars max="10" rating="{{movie.rating_score}}" unitWidth="25"></rating-stars>
+    </view>
+  </view>
+</view>

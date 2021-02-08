@@ -1,18 +1,25 @@
 // pages/recommend/recommend.js
+const movie_api = require("../../api/movie")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    recommend_list: [],
+    hot_list: [],
+    praise_list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      recommend_list: movie_api.get_recommend_movie_list_by_user(),
+      hot_list: movie_api.get_oneweek_hot_movie_list(),
+      praise_list: movie_api.get_oneweek_praise_movie_list()
+    })
   },
 
   /**

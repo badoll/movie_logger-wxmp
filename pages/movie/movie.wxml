@@ -48,9 +48,16 @@
     <view class="photos-text">剧照</view>
     <scroll-view class="photos-view" scroll-x>
       <view class="photos-item" wx:for="{{movie.photos}}">
-        <image src="{{item.url}}" class="photos-poster" bindload="set_photos_size" data-index="{{index}}" mode="aspectFit" style="width:{{item.width}}rpx">
+        <image src="{{item.url}}" class="photos-poster" bindload="set_photos_size" data-index="{{index}}"
+          mode="aspectFit" style="width:{{item.width}}rpx">
         </image>
       </view>
     </scroll-view>
   </view>
+
+  <view class="recommend-movies">
+    <view class="recommend-text">猜你喜欢</view>
+    <movie-list-x movieList="{{recommend_movie_list}}"></movie-list-x>
+  </view>
+
 </view>

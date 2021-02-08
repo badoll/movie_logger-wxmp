@@ -1,20 +1,30 @@
 <!--pages/recommend/recommend.wxml-->
+<search_bar></search_bar>
 <view class="main">
   <view class="main-content">
-    <view class="recommend">
 
+    <view class="recommend-content">
+      <view class="cate-text">今日推荐</view>
+      <view class="recommend-movies">
+        <view class="movie-recommend" wx:for="{{recommend_list}}">
+          <movie-recommend movie="{{item}}"></movie-recommend>
+        </view>
+      </view>
     </view>
 
     <view class="oneweek-hot">
-      <movie-list-x></movie-list-x>
+      <view class="cate-text">一周热榜</view>
+      <movie-list-x movieList="{{hot_list}}"></movie-list-x>
     </view>
 
     <view class="oneweek-praise">
-      <movie-list-x></movie-list-x>
+      <view class="cate-text">一周口碑榜</view>
+      <movie-list-x movieList="{{praise_list}}"></movie-list-x>
     </view>
 
-    <view class="top250">
+    <!-- <view class="top250">
       <movie-list-x></movie-list-x>
-    </view>
+    </view> -->
+
   </view>
 </view>

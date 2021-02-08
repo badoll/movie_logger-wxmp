@@ -8,3 +8,19 @@
 .main-content {
   width: 90%;
 }
+
+.main-content .recommend-content {
+  width: 100%;
+}
+
+.cate-text {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  text-align: left;
+}
+
+.recommend-movies .movie-recommend {
+  margin-bottom: 25rpx;
+}
