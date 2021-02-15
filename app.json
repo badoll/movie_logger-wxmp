@@ -23,14 +23,14 @@
     "borderStyle": "white",
     "list": [
       {
-        "selectedIconPath": "src/img/main_page_fill.png",
-        "iconPath": "src/img/main_page.png",
+        "selectedIconPath": "assets/img/main_page_fill.png",
+        "iconPath": "assets/img/main_page.png",
         "pagePath": "pages/index/index",
         "text": "首页"
       },
       {
-        "selectedIconPath": "src/img/like_page_fill.png",
-        "iconPath": "src/img/like_page.png",
+        "selectedIconPath": "assets/img/like_page_fill.png",
+        "iconPath": "assets/img/like_page.png",
         "pagePath": "pages/recommend/recommend",
         "text": "推荐"
       }
