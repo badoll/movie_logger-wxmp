@@ -53,31 +53,38 @@ function get_movie_by_id(id) {
         writer: "writer", //编剧
         region: "region", //地区
         language: "language",
-        release_data: "2020-1-22",
+        release_date: "2020-1-22",
         runtime: "101 minutes",
         intro: "电影讲述了一个balabalbala的故事",
         intro: "电影讲述了一个balabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbalabalabalbala的故事",
         main_cast: [{
             poster: "https://img2.doubanio.com/view/photo/l/public/p2265232293.webp",
-            name: "倪妮"
+            name: "倪妮",
+            role: "导演"
         }, {
             poster: "https://img2.doubanio.com/view/photo/l/public/p2265232293.webp",
-            name: "nini"
+            name: "nini",
+            role: "饰 role1"
         }, {
             poster: "https://img3.doubanio.com/view/photo/l/public/p2321839760.webp",
-            name: "伊丽莎白·奥尔森"
+            name: "伊丽莎白·奥尔森",
+            role: "饰 伊丽莎白·奥尔森"
         }, {
             poster: "https://img3.doubanio.com/view/photo/l/public/p2321839760.webp",
-            name: "Elizabeth Olsen"
+            name: "Elizabeth Olsen",
+            role: "饰 role3"
         }, {
             poster: "https://img3.doubanio.com/view/photo/l/public/p2321839760.webp",
-            name: "伊丽莎白·奥尔森"
+            name: "伊丽莎白·奥尔森",
+            role: "饰 role4"
         }, {
             poster: "https://img2.doubanio.com/view/photo/l/public/p2265232293.webp",
-            name: "nini"
+            name: "nini",
+            role: "饰 role5"
         }, {
             poster: "https://img2.doubanio.com/view/photo/l/public/p2265232293.webp",
-            name: "nini"
+            name: "nini",
+            role: "饰 role6"
         }],
         photos: [{
             url: "https://img3.doubanio.com/view/photo/l/public/p2629269420.webp",

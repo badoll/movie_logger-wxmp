@@ -67,13 +67,14 @@
 
 .movie-detail-tab .detail-tab-text {
   font-size: 30rpx;
-  font-weight: 550;
+  font-weight: 400;
   margin-right: 30rpx;
   color: rgb(156, 151, 151);
   /* border: 1px solid blue; */
 }
 
 .movie-detail-tab .selected-tab {
+  font-weight: 550;
   color: rgb(248, 110, 110);
   border-bottom: 1rpx solid rgb(248, 110, 110);
 }
@@ -122,7 +123,7 @@
   margin-right: 20rpx;
 }
 
-.cast-item .cast-name {
+.cast-item .cast-text {
   font-size: 26rpx;
   font-weight: 500;
   word-break: break-all;
@@ -130,6 +131,12 @@
   width: 150rpx;
   text-align: center;
   /* border: 1px solid green; */
+}
+
+.cast-item #cast-role {
+  font-weight: 300;
+  /* margin-top: 10rpx; */
+  /* border: 1px solid blue; */
 }
 
 .cast-item .cast-poster {

@@ -9,7 +9,7 @@
       <view class="movie-cate">类型：{{movie.cate}}</view>
       <view class="movie-region">地区：{{movie.region}}</view>
       <view class="movie-runtime">时长：{{movie.runtime}}</view>
-      <view class="movie-release_data">映期：{{movie.release_data}}</view>
+      <view class="movie-release_date">映期：{{movie.release_date}}</view>
     </view>
   </view>
   <view class="rating-content">
@@ -39,7 +39,8 @@
     <scroll-view class="main_cast-view" scroll-x>
       <view class="cast-item" wx:for="{{movie.main_cast}}">
         <image src="{{item.poster}}" class="cast-poster" mode="aspectFill"></image>
-        <view class="cast-name">{{item.name}}</view>
+        <view class="cast-text">{{item.name}}</view>
+        <view class="cast-text" id="cast-role">{{item.role}}</view>
       </view>
     </scroll-view>
   </view>
