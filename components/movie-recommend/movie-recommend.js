@@ -23,15 +23,19 @@ Component({
         }, {
           url: "https://img9.doubanio.com/view/photo/l/public/p2522076486.webp",
         }],
-        display_photos: [], //poster + photos
         rating_score: 7.3
       }
     }
   },
-  data: {},
-  attached: function () {
-    this.mergeDisplayPhotos()
+  lifetimes: {
+    attached: function () {},
   },
+  observers: {
+    //数据更新监听，不要在此更新监听的字段，会造成死循环
+    // 'movie': function (movie) {
+    // }
+  },
+  data: {},
   methods: {
     onNavigate: function (e) {
       let mid = e.currentTarget.dataset.mid
@@ -39,8 +43,10 @@ Component({
         url: "/pages/movie/movie?movie_id=" + mid,
       })
     },
+
     /**
      * 根据图片原尺寸设置等比例宽度（高度一定）
+     * 图片有缓存，src没有变的情况下bindload不会触发
      */
     onSetPhotosSize: function (e) {
       let m = this.data.movie
@@ -52,28 +58,7 @@ Component({
       this.setData({
         movie: m
       })
+      // console.log("bindload", m.display_photos[index].url)
     },
-    /**
-     * display_photos = poster + photos
-     */
-    mergeDisplayPhotos: function () {
-      let m = this.data.movie
-      let poster = {
-        url: m.poster
-      }
-      let dp = m.photos
-      dp.unshift(poster)
-
-      // 加上unique作为key
-      for (let i in dp) {
-        dp[i].unique = i
-      }
-
-      m.display_photos = dp
-      this.setData({
-        movie: m
-      })
-      console.log(this.data)
-    }
   }
 })

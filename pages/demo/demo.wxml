@@ -1,4 +1,0 @@
-<view>
-  <!-- <rating-stars max="10" rating="6.5"></rating-stars> -->
-  <movie-list-x></movie-list-x>
-</view>

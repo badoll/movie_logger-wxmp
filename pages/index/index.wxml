@@ -11,7 +11,7 @@
     <view class="movies-nowplaying" hidden="{{selected_tab != 0}}" wx:for="{{nowplaying_movie_list}}">
       <movie-itemy movie="{{item}}"></movie-itemy>
     </view>
-    <view class="movies-upcoming" hidden="{{selected_tab != 1}}" wx:for="{{nowplaying_movie_list}}">
+    <view class="movies-upcoming" hidden="{{selected_tab != 1}}" wx:for="{{upcoming_movie_list}}">
       <movie-itemy movie="{{item}}"></movie-itemy>
     </view>
   </view>

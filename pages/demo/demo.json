@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "rating-stars": "/components/rating-stars/rating-stars",
-    "movie-list-x": "/components/movie-list-x/movie-list-x"
-  }
-}

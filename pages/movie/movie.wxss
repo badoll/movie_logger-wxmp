@@ -120,7 +120,7 @@
 }
 
 .main_cast-view .cast-item:not(:last-child) {
-  margin-right: 20rpx;
+  margin-right: 15rpx;
 }
 
 .cast-item .cast-text {

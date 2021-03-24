@@ -6,20 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    recommend_list: [],
-    hot_list: [],
-    praise_list: []
+    recommend: [],
+    weeklytop: [],
+    newrelease: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      recommend_list: movie_api.get_recommend_movie_list_by_user(),
-      hot_list: movie_api.get_oneweek_hot_movie_list(),
-      praise_list: movie_api.get_oneweek_praise_movie_list()
-    })
+    this.set_recommend()
+    this.set_newrelease()
+    this.set_weeklytop()
   },
 
   /**
@@ -69,5 +67,52 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // set_recommend 今日推荐
+  set_recommend: function () {
+    let that = this
+    let user_info = getApp().globalData.user_info
+    let user_id = "null"
+    if (user_info) {
+      user_id = user_info.open_id
+    }
+    movie_api.get_recommend_by_user(user_id).then(list => {
+      that.setData({
+        recommend: list
+      })
+    }).catch(resp => {
+      console.log(`user(${user_id}) get recommend movie error, resp: ${JSON.stringify(resp)}`)
+    })
+  },
+
+  // refreash_recommend 刷新推荐
+  refreash_recommend: function () {
+    this.set_recommend()
+    // console.log(this.data.recommend)
+  },
+
+  // set_newrelease_movie 新片榜
+  set_newrelease: function () {
+    let that = this
+    movie_api.get_movie_list_by_chart("newrelease").then(list => {
+      that.setData({
+        newrelease: list
+      })
+    }).catch(resp => {
+      console.log(`get newrelease movie error, resp: ${JSON.stringify(resp)}`)
+    })
+  },
+
+  // set_weeklytop_movie 一周口碑榜
+  set_weeklytop: function () {
+    let that = this
+    movie_api.get_movie_list_by_chart("weeklytop").then(list => {
+      that.setData({
+        weeklytop: list
+      })
+    }).catch(resp => {
+      console.log(`get weeklytop movie error, resp: ${JSON.stringify(resp)}`)
+    })
   }
 })

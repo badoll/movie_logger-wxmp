@@ -1,6 +1,6 @@
 <view class="movie-inscroll" bindtap="onNavigate" data-mid="{{movie.id}}">
   <view class="movie-inscroll-poster">
-    <image class="poster-image" mode="aspectFill" src="{{movie.poster}}"></image>
+    <image class="poster-image" mode="aspectFill" src="{{movie.poster}}" lazy-load="true"></image>
   </view>
   <view class="movie-inscroll-desc">
     <text class="desc-text desc-title">{{movie.title}}</text>
@@ -8,9 +8,9 @@
     <text class="desc-text">导演：{{movie.director}}</text>
     <text class="desc-text">演员：{{movie.performer}}</text>
   </view>
-  <view class="movie-inscroll-rating" hidden="{{!movie.released}}">
+  <view class="movie-inscroll-rating">
     <rating-stars max="10" rating="{{movie.rating_score}}"></rating-stars>
   </view>
-  <view class="movie-inscroll-release_date" hidden="{{movie.released}}">{{movie.release_date}}</view>
+  <!-- <view class="movie-inscroll-release_date" hidden="{{movie.released}}">{{movie.release_date}}</view> -->
 </view>
 <!-- <view style="margin-bottom:100rpx"></view> -->

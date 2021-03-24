@@ -8,6 +8,7 @@
   width: 100%;
   display: inline-flex;
   white-space: nowrap;
+  /* border: 1px solid blue; */
 }
 
 .movie-photos-view .photos-item {
@@ -26,6 +27,7 @@
 }
 
 .movie-desc {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,6 +35,7 @@
 }
 
 .movie-desc-text {
+  width: 80%;
   text-align: center;
   overflow: hidden;
   white-space: nowrap;

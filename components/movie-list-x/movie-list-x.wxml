@@ -4,11 +4,11 @@
       <image class="poster-image" mode="aspectFill" src="{{item.poster}}"></image>
     </view>
     <view class="movie-inscroll-title">{{item.title}}</view>
-    <view class="movie-inscroll-bottom">
+    <!-- <view class="movie-inscroll-bottom">
       <view class="movie-inscroll-rating" hidden="{{!item.released}}">
         <rating-stars max="10" rating="{{item.rating_score}}"></rating-stars>
       </view>
       <view class="movie-inscroll-release_date" hidden="{{item.released}}">{{item.release_date}}</view>
-    </view>
+    </view> -->
   </view>
 </scroll-view>

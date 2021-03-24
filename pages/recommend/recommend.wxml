@@ -4,22 +4,25 @@
   <view class="main-content">
 
     <view class="recommend-content">
-      <view class="cate-text">今日推荐</view>
+      <view class="recommend-bar">
+        <view class="cate-text">今日推荐</view>
+        <image src="../../assets/img/refreash.png" class="refeash-icon" bindtap="refreash_recommend"></image>
+      </view>
       <view class="recommend-movies">
-        <view class="movie-recommend" wx:for="{{recommend_list}}">
+        <view class="movie-recommend" wx:for="{{recommend}}">
           <movie-recommend movie="{{item}}"></movie-recommend>
         </view>
       </view>
     </view>
 
-    <view class="oneweek-hot">
-      <view class="cate-text">一周热榜</view>
-      <movie-list-x movieList="{{hot_list}}"></movie-list-x>
+    <view class="oneweek-praise">
+      <view class="cate-text">新片榜</view>
+      <movie-list-x movieList="{{newrelease}}"></movie-list-x>
     </view>
 
-    <view class="oneweek-praise">
+    <view class="oneweek-hot">
       <view class="cate-text">一周口碑榜</view>
-      <movie-list-x movieList="{{praise_list}}"></movie-list-x>
+      <movie-list-x movieList="{{weeklytop}}"></movie-list-x>
     </view>
 
     <!-- <view class="top250">

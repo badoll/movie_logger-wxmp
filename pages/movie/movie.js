@@ -10,17 +10,15 @@ Page({
     detail_tab: ["简介", "详细信息"],
     current_tab: 0,
     intro_ellipsis: true,
-    recommend_movie_list: []
+    recommend: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      movie: movie_api.get_movie_by_id(options.movie_id),
-      recommend_movie_list: movie_api.get_recommend_movie_list_by_movie(options.movie_id),
-    })
+    this.set_movie_by_id(options.movie_id)
+    this.set_recommend(options.movie_id)
   },
 
   /**
@@ -101,6 +99,30 @@ Page({
     m.photos[index].width = x
     this.setData({
       movie: m
+    })
+  },
+
+  set_movie_by_id: function (douban_id) {
+    let that = this
+    movie_api.get_movie_by_id(douban_id).then(m => {
+      that.setData({
+        movie: m
+      })
+      // console.log(that.data.movie)
+    }).catch(resp => {
+      console.log(`get movie(${douban_id}) error, resp: ${JSON.stringify(resp)}`)
+    })
+  },
+
+  // get_recommend 电影相关推荐
+  set_recommend: function (douban_id) {
+    let that = this
+    movie_api.get_recommend_by_movie(douban_id).then(list => {
+      that.setData({
+        recommend: list
+      })
+    }).catch(resp => {
+      console.log(`movie(${douban_id}) get recommend movie error, resp: ${JSON.stringify(resp)}`)
     })
   }
 })

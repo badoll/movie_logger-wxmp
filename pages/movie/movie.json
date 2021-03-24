@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "movie-list-x": "/components/movie-list-x/movie-list-x"
-  }
+  },
+  "navigationBarTitleText": "电影"
 }

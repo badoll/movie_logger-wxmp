@@ -38,7 +38,7 @@
     <view class="main_cast-text">演职人员</view>
     <scroll-view class="main_cast-view" scroll-x>
       <view class="cast-item" wx:for="{{movie.main_cast}}">
-        <image src="{{item.poster}}" class="cast-poster" mode="aspectFill"></image>
+        <image src="{{item.avatar}}" class="cast-poster" mode="aspectFill"></image>
         <view class="cast-text">{{item.name}}</view>
         <view class="cast-text" id="cast-role">{{item.role}}</view>
       </view>
@@ -58,7 +58,7 @@
 
   <view class="recommend-movies">
     <view class="recommend-text">猜你喜欢</view>
-    <movie-list-x movieList="{{recommend_movie_list}}"></movie-list-x>
+    <movie-list-x movieList="{{recommend}}"></movie-list-x>
   </view>
 
 </view>

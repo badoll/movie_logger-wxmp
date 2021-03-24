@@ -1,8 +1,8 @@
 <view class="movie" bindtap="onNavigate" data-mid="{{movie.id}}">
-  <!-- 推荐页用电影剧照展示更容易引起兴趣 -->
+  <!-- TODO 照片较少的设置居中 -->
   <scroll-view class="movie-photos-view" scroll-x="true">
     <view class="photos-item" wx:for="{{movie.display_photos}}" wx:key="unique">
-      <image src="{{item.url}}" class="photos-poster" bindload="onSetPhotosSize" data-index="{{index}}" mode="aspectFit"
+      <image src="{{item.url}}" class="photos-poster" lazy-load="true" bindload="onSetPhotosSize" data-index="{{index}}" mode="aspectFit"
         style="width:{{item.width}}rpx">
       </image>
     </view>

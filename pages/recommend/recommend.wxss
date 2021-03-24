@@ -13,10 +13,27 @@
   width: 100%;
 }
 
+
+.recommend-bar {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+}
+
+.refeash-icon {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 5rpx;
+}
+
 .cate-text {
   margin-top: 20rpx;
   margin-bottom: 10rpx;
-  font-size: 35rpx;
+  font-size: 40rpx;
   font-weight: bold;
   text-align: left;
 }
