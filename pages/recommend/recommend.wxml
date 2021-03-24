@@ -6,7 +6,7 @@
     <view class="recommend-content">
       <view class="recommend-bar">
         <view class="cate-text">今日推荐</view>
-        <image src="../../assets/img/refreash.png" class="refeash-icon" bindtap="refreash_recommend"></image>
+        <image src="../../assets/img/refreash.png" class="refeash-icon" bindtap="refreash_recommend" animation="{{animation}}"></image>
       </view>
       <view class="recommend-movies">
         <view class="movie-recommend" wx:for="{{recommend}}">

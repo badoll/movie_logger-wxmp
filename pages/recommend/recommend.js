@@ -8,7 +8,10 @@ Page({
   data: {
     recommend: [],
     weeklytop: [],
-    newrelease: []
+    newrelease: [],
+    animation: '',
+    refreash_times: 0,
+    // rotateIndex: 0
   },
 
   /**
@@ -23,9 +26,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
+  onReady: function () {},
 
   /**
    * 生命周期函数--监听页面显示
@@ -89,7 +90,41 @@ Page({
   // refreash_recommend 刷新推荐
   refreash_recommend: function () {
     this.set_recommend()
+    this.refreash_once_anime()
+    // console.log(this.data.refreash_times)
     // console.log(this.data.recommend)
+  },
+
+  // refreash_once_anime 点击刷新旋转动画
+  refreash_once_anime: function () {
+    let times = this.data.refreash_times
+    let animation = wx.createAnimation({
+      delay: 0,
+      timingFunction: 'linear'
+    })
+    this.setData({
+      animation: animation.rotate(360 * (times + 1)).step().export(),
+      refreash_times: times + 1
+    })
+  },
+
+  // 未返回数据时刷新图标一直旋转，暂时不用
+  refreash_anime: function () {
+    this.timeInterval = setInterval(function () {
+      this.data.rotateIndex = this.data.rotateIndex + 1;
+      this.animation.rotate(360 * (this.data.rotateIndex)).step()
+      this.setData({
+        animation: this.animation.export()
+      })
+    }.bind(this), 500)
+  },
+
+  // 停止旋转
+  stop_refresh: function () {
+    if (this.timeInterval > 0) {
+      clearInterval(this.timeInterval)
+      this.timeInterval = 0
+    }
   },
 
   // set_newrelease_movie 新片榜
