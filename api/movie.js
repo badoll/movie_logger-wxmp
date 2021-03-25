@@ -62,10 +62,15 @@ function search_movie(title, limit, offset) {
     });
 }
 // get_recommend_by_user 用户今日推荐
-function get_recommend_by_user(user_id) {
+function get_recommend_by_user(user_id, page_num, recom_per_page) {
+    let offset = (page_num - 1) * recom_per_page
+    let url = `${base_url}/movie/recommend/default?limit=${recom_per_page}&offset=${offset}`
+    // if (user_id && user_id != 0) {
+    //     url = base_url + "/movie/recommend/user/" + user_id
+    // }
     return new Promise((resolve, reject) => {
         request({
-            url: base_url + "/movie/recommend/user/" + user_id
+            url: url
         }).then(data => {
             // 今日推荐展示图片
             // display_photos = poster + photos
@@ -106,7 +111,6 @@ function get_recommend_by_movie(movie_id) {
         })
     });
 }
-
 
 module.exports = {
     get_movie_by_id,

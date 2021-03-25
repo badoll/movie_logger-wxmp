@@ -1,0 +1,12 @@
+<view class="main">
+  <view class="title">选择你感兴趣的类型</view>
+
+  <view class="check-field">
+    <view class="check-list {{item.is_select?'selected':''}}" wx:for="{{item_list}}" bindtap='onSelect'
+      data-index='{{index}}'>{{item.name}}</view>
+  </view>
+
+  <icon type="success_no_circle" size="80rpx" hidden="{{has_select}}"></icon>
+  <icon type="success" size="80rpx" hidden="{{!has_select}}" bindtap="onConfirm"></icon>
+
+</view>

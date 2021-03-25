@@ -2,15 +2,11 @@
 const user_api = require("api/user")
 App({
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
     this.init_navbar_size();
     // 登录
     wx.login({
       success: res => {
-        user_api.set_user_info(res.code) //set用户open_id
+        user_api.set_user_info(res.code) //set user_id
       }
     })
   },
@@ -38,6 +34,6 @@ App({
       menu_bottom: 0, // 胶囊距底部间距（保持底部间距一致）
       menu_height: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致
     },
-    user_info: null, // {info: {}, open_id:""}
+    user_info: {}, // {info: {}, id: 0, like_list: []}
   }
 })

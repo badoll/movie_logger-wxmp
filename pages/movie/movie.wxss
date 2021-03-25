@@ -177,3 +177,31 @@
   font-size: 30rpx;
   font-weight: 550;
 }
+
+.like-bar {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 40rpx;
+  margin-right: 20rpx;
+  /* 主框架边缘占5% */
+  /* left: 95%;
+  transform: translateX(-95%); */
+
+  width: 90rpx;
+  height: 90rpx;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #999999;
+  border: 1px solid #DBDBDB;
+}
+
+.like-icon {
+  width: 80rpx;
+  height: 80rpx;
+}

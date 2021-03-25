@@ -27,7 +27,7 @@
       },
       {
         "selectedIconPath": "assets/img/like_page_fill.png",
-        "iconPath": "assets/img/like_page.png",
+        "iconPath": "assets/img/like.png",
         "pagePath": "pages/recommend/recommend",
         "text": "推荐"
       }

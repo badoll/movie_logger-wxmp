@@ -14,6 +14,23 @@
 }
 
 
+.fixed-panel {
+  position: fixed;
+  width: 90%;
+}
+
+.select-inter-panel {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  border-radius: 40rpx;
+  height: 600rpx;
+  z-index: 999;
+  background-color: white;
+  border: 1px solid #DBDBDB;
+}
+
 .recommend-bar {
   width: 100%;
   display: inline-flex;

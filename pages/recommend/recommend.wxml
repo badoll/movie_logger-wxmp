@@ -2,32 +2,33 @@
 <search_bar></search_bar>
 <view class="main">
   <view class="main-content">
-
-    <view class="recommend-content">
-      <view class="recommend-bar">
-        <view class="cate-text">今日推荐</view>
-        <image src="../../assets/img/refreash.png" class="refeash-icon" bindtap="refreash_recommend" animation="{{animation}}"></image>
-      </view>
-      <view class="recommend-movies">
-        <view class="movie-recommend" wx:for="{{recommend}}">
-          <movie-recommend movie="{{item}}"></movie-recommend>
+    <view class="select-inter-panel" wx:if="{{selecting_inter}}">
+      <check-box bind:confirm_inter="on_confirm_inter"></check-box>
+    </view>
+    <view class="{{selecting_inter?'fixed-panel':''}}">
+      <view class="recommend-content">
+        <view class="recommend-bar">
+          <view class="cate-text">今日推荐</view>
+          <image src="../../assets/img/refreash.png" class="refeash-icon" bindtap="refreash_recommend"
+            animation="{{animation}}"></image>
+        </view>
+        <view class="recommend-movies" disabled="true">
+          <view class="movie-recommend" wx:for="{{recommend}}">
+            <movie-recommend movie="{{item}}"></movie-recommend>
+          </view>
         </view>
       </view>
-    </view>
 
-    <view class="oneweek-praise">
-      <view class="cate-text">新片榜</view>
-      <movie-list-x movieList="{{newrelease}}"></movie-list-x>
-    </view>
+      <view class="oneweek-praise">
+        <view class="cate-text">新片榜</view>
+        <movie-list-x movieList="{{newrelease}}"></movie-list-x>
+      </view>
 
-    <view class="oneweek-hot">
-      <view class="cate-text">一周口碑榜</view>
-      <movie-list-x movieList="{{weeklytop}}"></movie-list-x>
+      <view class="oneweek-hot">
+        <view class="cate-text">一周口碑榜</view>
+        <movie-list-x movieList="{{weeklytop}}"></movie-list-x>
+      </view>
     </view>
-
-    <!-- <view class="top250">
-      <movie-list-x></movie-list-x>
-    </view> -->
 
   </view>
 </view>
