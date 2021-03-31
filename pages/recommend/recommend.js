@@ -160,6 +160,7 @@ Page({
     if (user_id) {
       user_api.set_inter_field(user_id, e.detail.inter_list)
     }
+    this.set_recommend()
     this.setData({
       selecting_inter: false
     })

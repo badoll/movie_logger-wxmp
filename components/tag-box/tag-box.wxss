@@ -1,0 +1,51 @@
+.main {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 30rpx;
+}
+
+.title {
+  width: 20%;
+  font-size: 25rpx;
+  font-family: -apple-system;
+  text-align: center;
+  color: rgb(160, 155, 155);
+  /* border: 1px solid green; */
+}
+
+.check-field {
+  width: 80%;
+  height: 100rpx;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around;
+  align-content: space-around; */
+  /* border: 1px solid blue; */
+}
+
+.check-list {
+  width: 100rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  border-radius: 40rpx;
+
+  font-size: 25rpx;
+  /*水平居中*/
+  text-align: center;
+  /*垂直居中*/
+  line-height: 40rpx;
+  font-family: -apple-system;
+
+  background-color: #ffffff;
+  color: #999999;
+  border: 1px solid #DBDBDB;
+}
+
+.selected {
+  background-color: #F86E6E;
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid #F86E6E;
+}

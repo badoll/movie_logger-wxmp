@@ -27,7 +27,7 @@
 }
 
 .holder-view {
-  margin-top: 60rpx;
+  margin-top: 65rpx;
 }
 
 .movie-list {

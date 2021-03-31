@@ -1,0 +1,9 @@
+<view class="main">
+  <view class="title">热门标签</view>
+
+  <view class="check-field">
+    <view class="check-list {{item.is_select?'selected':''}}" wx:for="{{item_list}}" bindtap='onSelect'
+      data-index='{{index}}'>{{item.name}}</view>
+  </view>
+
+</view>

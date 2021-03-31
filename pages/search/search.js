@@ -10,6 +10,7 @@ Page({
     searchText: "",
     pageNum: 1,
     numPerPage: 10,
+    filter: {}, // 过滤tag
   },
 
   /**
@@ -41,7 +42,8 @@ Page({
     let title = that.data.searchText
     let pageNum = that.data.pageNum + 1
     let offset = (pageNum - 1) * that.data.numPerPage
-    movie_api.search_movie(title, that.data.numPerPage, offset).then(newList => {
+    let filter = that.data.filter
+    movie_api.search_movie(title, filter, that.data.numPerPage, offset).then(newList => {
       let oldList = that.data.movieList
       that.setData({
         movieList: oldList.concat(newList),
@@ -67,9 +69,11 @@ Page({
     this.onSearchMovieByTitle(event.detail.value)
   },
 
+  // onSearchMovieByTitle 重新搜索后重置pageNum
   onSearchMovieByTitle: function (title) {
     let that = this
-    movie_api.search_movie(title, this.data.numPerPage, 0).then(list => {
+    let filter = that.data.filter
+    movie_api.search_movie(title, filter, that.data.numPerPage, 0).then(list => {
       that.setData({
         movieList: list,
         pageNum: 1
@@ -85,4 +89,26 @@ Page({
       console.log(`search movie(${title}) error, resp: ${JSON.stringify(resp)}`)
     })
   },
+
+  // onSelectTag 选择标签后执行搜索
+  onSelectTag: function (e) {
+    let title = this.data.searchText
+    let filter = {}
+    let cate_list = e.detail.cate_list
+    let director_list = e.detail.director_list
+    let performer_list = e.detail.performer_list
+    if (cate_list.length > 0) {
+      filter.cate = cate_list
+    }
+    if (director_list.length > 0) {
+      filter.director = director_list
+    }
+    if (performer_list.length > 0) {
+      filter.performer = performer_list
+    }
+    this.setData({
+      filter: filter
+    })
+    this.onSearchMovieByTitle(title)
+  }
 })

@@ -7,6 +7,7 @@
     </view>
     <!-- 用于占位 -->
     <view class="holder-view"></view>
+    <tag-box bind:onSelectTag="onSelectTag"></tag-box>
     <view class="movie-list" wx:for="{{movieList}}">
       <movie-itemy movie="{{item}}"></movie-itemy>
     </view>

@@ -41,7 +41,7 @@ function get_movie_by_id(id) {
 
 // search_movie 搜索电影
 // TODO 暂时只提供电影名前缀搜索
-function search_movie(title, limit, offset) {
+function search_movie(title, filter, limit, offset) {
     return new Promise((resolve, reject) => {
         request({
             url: base_url + "/movie/search",
@@ -51,6 +51,7 @@ function search_movie(title, limit, offset) {
             },
             data: {
                 title,
+                filter,
                 limit,
                 offset
             },
@@ -65,9 +66,9 @@ function search_movie(title, limit, offset) {
 function get_recommend_by_user(user_id, page_num, recom_per_page) {
     let offset = (page_num - 1) * recom_per_page
     let url = `${base_url}/movie/recommend/default?limit=${recom_per_page}&offset=${offset}`
-    // if (user_id && user_id != 0) {
-    //     url = base_url + "/movie/recommend/user/" + user_id
-    // }
+    if (user_id && user_id != 0) {
+        url = `${base_url}/movie/recommend/user/${user_id}?limit=${recom_per_page}&offset=${offset}`
+    }
     return new Promise((resolve, reject) => {
         request({
             url: url
@@ -99,11 +100,12 @@ function get_recommend_by_user(user_id, page_num, recom_per_page) {
     });
 }
 
-// get_recommend_by_movie 电影相关推荐
+// get_recommend_by_movie 电影相关推荐(默认10个)
 function get_recommend_by_movie(movie_id) {
+    let url = `${base_url}/movie/recommend/movie/${movie_id}?limit=10&offset=0`
     return new Promise((resolve, reject) => {
         request({
-            url: base_url + "/movie/recommend/movie/" + movie_id
+            url: url
         }).then(data => {
             resolve(data.movie_list)
         }).catch(resp => {

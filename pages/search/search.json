@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "movie-itemy": "/components/movie-itemy/movie-itemy"
+    "movie-itemy": "/components/movie-itemy/movie-itemy",
+    "tag-box": "/components/tag-box/tag-box"
   },
   "navigationBarTitleText": "搜索"
 }
