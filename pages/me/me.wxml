@@ -1,0 +1,12 @@
+<!--pages/me/me.wxml-->
+<view class="main">
+  <view class="main-content">
+    <view class="head-bar">
+      <image src="{{avatar}}" class="avatar"></image>
+    </view>
+
+    <view class="like-list" wx:for="{{like_list}}">
+      <movie-itemy movie="{{item}}"></movie-itemy>
+    </view>
+  </view>
+</view>

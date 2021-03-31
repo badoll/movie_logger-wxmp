@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "movie-itemy": "/components/movie-itemy/movie-itemy"
+  },
+  "onReachBottomDistance": 50,
+  "navigationBarTitleText": "❤️"
+}

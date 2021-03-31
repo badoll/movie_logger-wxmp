@@ -114,10 +114,25 @@ function get_recommend_by_movie(movie_id) {
     });
 }
 
+// get_user_like_movie 拉取用户喜欢的电影
+function get_user_like_movie(user_id, limit, offset) {
+    let url = `${base_url}/movie/user/like/${user_id}?limit=${limit}&offset=${offset}`
+    return new Promise((resolve, reject) => {
+        request({
+            url: url
+        }).then(data => {
+            resolve(data.movie_list)
+        }).catch(resp => {
+            reject(resp)
+        })
+    });
+}
+
 module.exports = {
     get_movie_by_id,
     get_movie_list_by_chart,
     search_movie,
     get_recommend_by_user,
-    get_recommend_by_movie
+    get_recommend_by_movie,
+    get_user_like_movie
 }

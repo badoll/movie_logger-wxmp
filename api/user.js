@@ -6,8 +6,14 @@ const {
 // code 换 服务器 user_id, 存storage
 function set_user_info(code) {
   let user_info = wx.getStorageSync("user_info")
-  if (user_info && user_info.id) {
-    getApp().globalData.user_info.id = user_info.id
+  if (user_info) {
+    if (user_info.id) {
+      getApp().globalData.user_info.id = user_info.id
+    }
+    // 暂时不从服务器异步拉头像
+    // if (user_info.info) {
+    //   getApp().globalData.user_info.info = user_info.info
+    // }
   }
 
   // 异步更新用户信息(喜欢的电影等)
@@ -16,6 +22,12 @@ function set_user_info(code) {
       id: data.user_id,
       like_list: data.like_list
     }
+    // if (data.nick_name && data.avatar_url) {
+    //   user_info.info = {
+    //     nick_name: data.nick_name,
+    //     avatar_url: data.avatar_url,
+    //   }
+    // }
     getApp().globalData.user_info = user_info
     wx.setStorageSync("user_info", user_info)
   }).catch(resp => {
@@ -105,9 +117,29 @@ function like(user_id, movie_id, like) {
   })
 }
 
+// update_user_info 更新用户昵称头像
+function update_user_info(user_info) {
+  request({
+    url: base_url + "/user/account/update/" + user_info.id,
+    method: "POST",
+    header: {
+      'content-type': 'application/json'
+    },
+    data: {
+      nick_name: user_info.nick_name,
+      avatar_url: user_info.avatar_url,
+    },
+  }).then(data => {
+    // console.log(`user(${user_id}) update_user_info succ`)
+  }).catch(resp => {
+    console.log(`user(${user_id}) update_user_info error, resp: ${JSON.stringify(resp)}`)
+  })
+}
+
 module.exports = {
   set_user_info,
   is_new_user,
   set_inter_field,
   like,
+  update_user_info
 }

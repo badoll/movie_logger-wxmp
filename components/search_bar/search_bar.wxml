@@ -2,7 +2,7 @@
 <view class="nav-bar" style="height:{{nav_bar_height}}px;">
     <view class="search_bar"
         style="height:{{menu_height}}px; min-height:{{menu_height}}px; line-height:{menu_height}}px; bottom:{{menu_bottom}}px; width:{{search_bar_width}}px">
-        <image src="../../assets/img/icon.jpg" class="icon" style="height:{{menu_height}}px; width:{{menu_height}}px;">
+        <image src="{{icon_src}}" class="icon" style="height:{{menu_height}}px; width:{{menu_height}}px;" bindtap="onTap">
         </image>
         <input disabled="true" class="search" placeholder="搜索" style="height:{{menu_height}}px;" bindtap="onNavigate"></input>
     </view>

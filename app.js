@@ -25,6 +25,23 @@ App({
     that.globalData.screen_size.left_border = systemInfo.screenWidth * 0.05;
     console.log(that.globalData)
   },
+  // watch 监听全局变量 user_info
+  // watch: function (method) {
+  //   var obj = this.globalData
+  //   Object.defineProperty(obj, 'user_info', {
+  //     configurable: true,
+  //     enumerable: true,
+  //     writable: true,
+  //     value: {},
+  //     set: function (value) {
+  //       this._name = value;
+  //       method(value);
+  //     },
+  //     get: function () {
+  //       return this._name
+  //     }
+  //   })
+  // },
   globalData: {
     screen_size: {
       left_border: 0,
